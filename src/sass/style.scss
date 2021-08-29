@@ -20,12 +20,44 @@ body {
   background-attachment: fixed;
   height: 100vh;
   padding-top: 28px;
+  position: relative;
 }
 
 .container {
   width: 1285px;
   margin: 0 auto;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.swiper {
+  margin-top: 50px;
+  margin-left: 75px;
+  filter: drop-shadow(8px 8px 31px rgba(158, 158, 158, 0.25));
+  height: 90%;
+}
+
+.swiper-pagination-bullet{
+  background: transparent;
+  border: 1px solid #272727;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px !important;
+  opacity: 1;
+  outline: none;
+}
+.swiper-pagination-bullet:last-child{
+  margin-right: 0 !important;
+}
+.swiper-pagination-bullet-active{
+  background: #272727;
 }
 
 @import "block/header";
 @import "block/promo";
+@import "block/about";
+@import "block/portfolio";
+@import "block/modal";

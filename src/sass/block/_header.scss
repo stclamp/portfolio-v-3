@@ -30,6 +30,7 @@
     border: none;
     cursor: pointer;
     position: relative;
+    outline: none;
   }
   &__menu-link--active {
     color: #1e1e1e;
@@ -46,38 +47,34 @@
     right: -16px;
     width: 0;
     height: 0;
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-top: 7px solid #949494;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #949494;
     border-radius: 10px;
     transition: all 0.1s ease-in-out;
   }
   .dropbtn-active::after {
-    border-left: 7px solid transparent;
-    border-right: 0 solid transparent;
-    border-top: 7px solid #949494;
+    right: -12px;
+    border-left: 0 solid transparent;
     border-radius: 50%;
   }
-
   .dropbtn:hover,
   .dropbtn:focus {
     color: #1e1e1e;
   }
 
-  /* The container <div> - needed to position the dropdown content */
   .dropdown {
     position: relative;
     display: inline-block;
   }
 
-  /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
     position: absolute;
-    background: rgba(196, 196, 196, 0.15);
-    border: 1px solid rgba(196, 196, 196, 0.61);
+    background: rgb(196, 196, 196);
+    border: 1px solid rgb(196, 196, 196);
     min-width: 160px;
-    z-index: 1;
+    z-index: 999;
   }
 
   /* Links inside the dropdown */
@@ -105,18 +102,48 @@
   /* Change the background color of the dropdown button when the dropdown content is shown */
 }
 
-.social__link svg {
-  color: #fff;
-  width: 48px;
-  height: 48px;
-  transition: color 0.3s ease-in-out;
-}
-.social__link svg:hover {
-}
-.a:hover {
-  fill: #000;
-}
+.social {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  &__list {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    width: 0;
+  }
+  &__item{
+    
+    font-size: 28px;
+    margin-bottom: 57px;
+    
+    
+    
+  }
+  &__item:last-child{
+    margin-bottom: 0;
+  }
+  
+  &__link {
+    color: #000;
+    font-weight: 100;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    width: 48px;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
 
-.b:hover {
-  fill: #000;
+  }
+  &__link:hover {
+    background-color: #000;
+    color: #fff
+  }
 }

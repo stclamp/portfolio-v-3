@@ -1,0 +1,111 @@
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    backdrop-filter: blur(14px);
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 650px;
+    background: rgba(247, 247, 247, 0.79);
+    border: 1px solid rgba(117, 117, 117, 0.17);
+    padding: 60px;
+    border-radius: 15px;
+    
+    
+    &__close {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        border: none;
+        background-color: transparent;
+        font-size: 36px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    &__close:hover {
+        transform: rotate(-90deg);
+    }
+    &__title {
+        font-size: 36px;
+        line-height: 50px;
+        font-weight: 700;
+    }
+    &__form {
+        margin-top: 31px;
+    }
+    &__input {
+        width: 255px;
+        display: block;
+        border: 1px solid #393939;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        padding: 6px 12px;
+        background-color: transparent;
+    }
+    &__input::placeholder, &__textarea::placeholder {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 19px;
+        color:#393939;
+    }
+    &__input-long{
+        width: 393px;
+    }
+    &__textarea {
+        display: block;
+        resize: none;
+        padding: 6px 12px;
+        width: 530px;
+        height: 113px;
+        border: 1px solid #393939;
+        border-radius: 8px;
+        background-color: transparent;
+    }
+    &__btn {
+        margin-top: 37px;
+        padding: 11px 22px;
+        text-align: center;
+        color: #393939;
+        background-color: $y-color;
+        border: none;
+        cursor: pointer;
+        box-shadow: 4px 4px 11px rgba(106, 95, 0, 0.06);
+        border-radius: 8px;
+        transition: background-color 0.3s ease-in-out;
+    }
+    &__btn:hover {
+        background-color: #e7d31f;
+    }
+}
+
+.show {
+    animation: animatetop 0.4s ease-in-out;
+}
+
+.hide{
+    animation: animatebot 0.4s ease-in-out;
+}
+
+
+
+@keyframes animatetop {
+    from {opacity:0}
+    to {opacity:1}
+}
+
+@keyframes animatebot {
+    from {opacity:1}
+    to {opacity:2}
+}
+
+@keyframes modalHide {
+    from { transform: translateY(300px);  opacity:1; }
+    to { transform: translateY(-300px);  opacity:0; }
+  }
