@@ -1,0 +1,31 @@
+@import "base/reset";
+@import "base/vars";
+* {
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(196, 196, 196, 0.12) 50%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  padding-top: 28px;
+}
+
+.container {
+  width: 1285px;
+  margin: 0 auto;
+}
+
+@import "block/header";
+@import "block/promo";

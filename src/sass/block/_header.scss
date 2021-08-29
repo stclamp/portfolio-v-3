@@ -1,0 +1,122 @@
+.header {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: 300;
+    color: #393939;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    margin-right: 93px;
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+  &__menu-link,
+  .dropbtn {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 300;
+    color: $g-color;
+    transition: color 0.3s ease-in-out;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+  }
+  &__menu-link--active {
+    color: #1e1e1e;
+  }
+  &__menu-link:hover,
+  .dropbtn:hover {
+    color: #1e1e1e;
+  }
+
+  .dropbtn::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: -16px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #949494;
+    border-radius: 10px;
+    transition: all 0.1s ease-in-out;
+  }
+  .dropbtn-active::after {
+    border-left: 7px solid transparent;
+    border-right: 0 solid transparent;
+    border-top: 7px solid #949494;
+    border-radius: 50%;
+  }
+
+  .dropbtn:hover,
+  .dropbtn:focus {
+    color: #1e1e1e;
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(196, 196, 196, 0.15);
+    border: 1px solid rgba(196, 196, 196, 0.61);
+    min-width: 160px;
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content span {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid rgba(57, 57, 57, 0.15);
+  }
+  .dropdown-content span:last-child {
+    border-bottom: none;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content span:hover {
+    background-color: #ddd;
+  }
+
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {
+    display: block;
+  }
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+}
+
+.social__link svg {
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  transition: color 0.3s ease-in-out;
+}
+.social__link svg:hover {
+}
+.a:hover {
+  fill: #000;
+}
+
+.b:hover {
+  fill: #000;
+}
