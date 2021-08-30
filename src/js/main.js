@@ -86,4 +86,5 @@ function hideModal(e) {
 
 }
 
+console.log(new Date(2021, 07, 30)+3)
 

@@ -40,7 +40,7 @@ body {
   height: 90%;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   background: transparent;
   border: 1px solid #272727;
   width: 20px;
@@ -49,10 +49,10 @@ body {
   opacity: 1;
   outline: none;
 }
-.swiper-pagination-bullet:last-child{
+.swiper-pagination-bullet:last-child {
   margin-right: 0 !important;
 }
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background: #272727;
 }
 
@@ -61,3 +61,4 @@ body {
 @import "block/about";
 @import "block/portfolio";
 @import "block/modal";
+@import "block/media";
