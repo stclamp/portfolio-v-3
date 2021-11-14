@@ -34,6 +34,9 @@
   &__close:hover {
     transform: rotate(-90deg);
   }
+  &__close:focus {
+    outline: none;
+  }
   &__title {
     font-size: 36px;
     line-height: 50px;
