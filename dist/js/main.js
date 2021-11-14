@@ -72,9 +72,8 @@ function showModal(e) {
     e.preventDefault();
 
     overlay.classList.remove('hidden');
-    modal.classList.remove('hidden');
-
-
+    modal.classList.add('show');
+    // modal.classList.add('show');
 
 }
 
@@ -82,8 +81,9 @@ function hideModal(e) {
     e.preventDefault();
 
     overlay.classList.add('hidden');
-    modal.classList.add('hidden');
+    modal.classList.remove('show');
+    // modal.classList.remove('show');
+    // modal.classList.add('hide');
 
 }
-
 

@@ -1,8 +1,14 @@
-.portfolio{
-    &__wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 80vh;
-    }
+.portfolio {
+  transition: all 0.5s ease;
+  opacity: 0;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+}
+
+.show {
+  opacity: 1;
 }
