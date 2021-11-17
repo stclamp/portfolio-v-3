@@ -2,6 +2,11 @@
   .container {
     width: 1140px;
   }
+  .header {
+    .dropdown-content {
+      right: -24px;
+    }
+  }
   .social {
     left: 32px;
   }
@@ -12,9 +17,53 @@
     &__title {
       line-height: 74px;
     }
+    &__img {
+      margin-right: 0;
+    }
   }
   .swiper {
     width: 80%;
-    margin-left: auto;
+    // margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 720px;
+  }
+
+  .header {
+    .dropdown-content {
+      right: -17px;
+    }
+  }
+
+  .about {
+    &__img {
+      display: none;
+    }
+  }
+
+  .swiper {
+    height: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 540px;
+  }
+
+  .header {
+    &__item {
+      margin-right: 45px;
+    }
   }
 }
