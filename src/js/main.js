@@ -29,6 +29,14 @@ worksPageBtn.addEventListener('click', (e) => {
     mainPageBtn.classList.remove('header__menu-link--active');
     worksPageBtn.classList.add('header__menu-link--active');
     portfolio.classList.remove('hidden');
+
+    headerList.classList.remove('active');
+    headerItems.forEach(item => {
+        item.classList.remove('active');
+    });
+    dropDownBtn.classList.remove('active');
+    close.style.display = 'none';
+    humburgerImg.style.display = 'block';
 });
 
 mainPageBtn.addEventListener('click', (e) => {
@@ -38,6 +46,14 @@ mainPageBtn.addEventListener('click', (e) => {
     portfolio.classList.add('hidden');
     mainPageBtn.classList.add('header__menu-link--active');
     worksPageBtn.classList.remove('header__menu-link--active');
+
+    headerList.classList.remove('active');
+    headerItems.forEach(item => {
+        item.classList.remove('active');
+    });
+    dropDownBtn.classList.remove('active');
+    close.style.display = 'none';
+    humburgerImg.style.display = 'block';
 })
 
 //slider 
@@ -86,4 +102,32 @@ function hideModal(e) {
     // modal.classList.add('hide');
 
 }
+
+// Burger
+
+const humburgerImg = document.querySelector('.humburger__img');
+const headerList = document.querySelector('.header__list');
+const headerItems = document.querySelectorAll('.header__item');
+const close = document.querySelector('.humburger__close');
+
+
+humburgerImg.addEventListener('click', () => {
+    headerList.classList.add('active');
+    headerItems.forEach(item => {
+        item.classList.add('active');
+    });
+    dropDownBtn.classList.add('active');
+    close.style.display = 'block';
+    humburgerImg.style.display = 'none';
+});
+
+close.addEventListener('click', () => {
+    headerList.classList.remove('active');
+    headerItems.forEach(item => {
+        item.classList.remove('active');
+    });
+    dropDownBtn.classList.remove('active');
+    close.style.display = 'none';
+    humburgerImg.style.display = 'block';
+});
 
